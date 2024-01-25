@@ -10,7 +10,7 @@ namespace addressbook
     {
         class Contact
         {
-
+            
             public string First_Name { get; set; }
             public string Last_Name { get; set; }
             public string Address { get; set; }
@@ -49,13 +49,22 @@ namespace addressbook
             Console.Write("Enter the phoneno:");
             NewContact.Phoneno = Console.ReadLine();
 
+            
+
+            Addressbook.Add(NewContact);
+            
+            Console.WriteLine("Contact added successfully:");
+            Console.WriteLine($"First_Name: {NewContact.First_Name}");
+            Console.WriteLine($"Last_Name: {NewContact.Last_Name}");
+            Console.WriteLine($"City: {NewContact.City}");
+            Console.WriteLine($"Zip: {NewContact.Zip}");
+            Console.WriteLine($"Phone Number: {NewContact.Phoneno}");
+            Console.WriteLine($"Email: {NewContact.Email}");
             Console.ReadLine();
         }
     }
 }
 
-
-            
         
 
 
