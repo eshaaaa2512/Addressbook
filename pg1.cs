@@ -77,6 +77,8 @@ class AddressBook
 
             Console.Write("\nEnter the option to edit: ");
             int option = Convert.ToInt32(Console.ReadLine());
+          
+        
 
             switch (option)
             {
@@ -111,7 +113,20 @@ class AddressBook
             }
 
             Console.Clear();
-            Console.WriteLine("Contact Edited Successfully.");
+
+            if (Equals(existingContact.FirstName, firstName))
+            {
+                Console.WriteLine("Same name can't be written");
+            }
+            else
+            {
+                Console.WriteLine("Enter Different name:" + (firstName));
+
+            }
+
+
+               
+          
         }
     }
 
@@ -245,6 +260,8 @@ class Program
                 case 7:
                     isRunning = false;
                     break;
+
+
             }
         }
     }
